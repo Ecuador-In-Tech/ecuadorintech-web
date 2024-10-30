@@ -15,7 +15,7 @@ export const headerData = {
       href: getPermalink('/'),
     },
   ],
-  actions: [{ text: 'Involúcrate', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
+  actions: [{ text: 'Involúcrate', href: getPermalink('/#volunteers'), target: '_blank' }],
 };
 
 export const footerData = {
