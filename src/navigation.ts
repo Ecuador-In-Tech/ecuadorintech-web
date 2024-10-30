@@ -23,45 +23,30 @@ export const footerData = {
     {
       title: 'Comunidad',
       links: [
-        { text: 'Directorio de comunidades', href: '#' },
-        { text: 'Oportunidades', href: '#' },
+        { text: 'Directorio', href: '#' },
         { text: 'Eventos', href: '#' },
-        { text: 'Donaciones', href: '#' },
       ],
     },
     {
       title: 'Nosotros',
       links: [
-        { text: 'Misión y visión', href: '#' },
         { text: 'Equipo', href: '#' },
         { text: 'Código de Conducta', href: '#' },
       ],
     },
     {
       title: 'Donaciones',
-      links: [{ text: 'About', href: '#' }],
+      links: [{ text: 'Quiero donar', href: '#' }],
     },
     {
       title: 'Oportunidades',
-      links: [
-        { text: 'Voluntariado', href: '#' },
-        { text: 'Trabajo', href: '#' },
-        { text: 'Otros', href: '#' },
-      ],
+      links: [{ text: 'Voluntariado', href: '#' }],
     },
   ],
   secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
-    { text: 'Privacy Policy', href: getPermalink('/privacy') },
+    { text: 'Términos y Condiciones', href: getPermalink('/terms') },
+    { text: 'Políticas y Privacidad', href: getPermalink('/privacy') },
+    { text: 'Código de Conducta', href: getPermalink('/coc') },
   ],
-  socialLinks: [
-    { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-    { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
-  ],
-  footNote: `
-    Made by <a class="text-secondary underline dark:text-secondary" href="https://onwidget.com/">Ecuador in Tech team</a> · All rights reserved.
-  `,
+  socialLinks: [{ ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/Ecuador-In-Tech' }],
 };
