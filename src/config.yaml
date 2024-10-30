@@ -1,6 +1,6 @@
 site:
   name: 'Ecuador in Tech'
-  site: 'https://bjgavilanes.github.io'
+  site: 'https://ecuador-in-tech.github.io'
   base: '/ecuadorintech-web'
   trailingSlash: false
 
