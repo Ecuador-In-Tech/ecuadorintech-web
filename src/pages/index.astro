@@ -1,11 +1,9 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Hero2 from '~/components/widgets/Hero2.astro';
+import Hero from '~/components/widgets/Hero.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import Features3 from '~/components/widgets/Features3.astro';
-import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 
 const metadata = {
@@ -14,91 +12,57 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero2 Widget ******************* -->
+  <!-- Hero Widget ******************* -->
 
-  <Hero2
-    tagline="Ecosistema fuerte y colaborativo"
-    image={{
-      src: 'https://images.unsplash.com/photo-1535303311164-664fc9ec6532?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Ecuador in Tech es una metacomunidad que conecta, fortalece y amplía el impacto de las comunidades tecnológicas.',
-    }}
+  <Hero
+    tagline="Descubre Conecta Crece"
+    actions={[
+      { variant: 'primary', target: '', text: '¡Involúcrate!', href: '#volunteers' },
+      { text: 'Lee nuestro código de conducta', href: '/coc' },
+    ]}
   >
     <Fragment slot="title">Ecuador In Tech</Fragment>
     <Fragment slot="subtitle">
       Buscamos conectar, fortalecer y ampliar en impacto de las comuniades tecnológicas. ¡Queremos facilitar la conexión
       y el intercambio de conocimientos!
     </Fragment>
-  </Hero2>
+  </Hero>
 
-  <!-- Features3 Widget ************** -->
+  <!-- Features2 Widget ************** -->
 
-  <Features3
+  <Features2
     id="believe"
-    title="¿En qué creemos?"
-    subtitle="Queremos servir a las comunidades tecnológicas para co-construir un ecosistema a nivel país saludable."
     tagline="Nuestra visión"
+    title="¡La metacomunidad más grande!"
+    subtitle="Queremos servir a las comunidades tecnológicas para co-construir un ecosistema a nivel país saludable."
     columns={3}
     items={[
       {
         title: 'Colaboración',
         description: `Creemos en la fuerza de la unión y en el valor de trabajar juntos para lograr objetivos comunes.`,
-        icon: 'tabler:square-number-1',
+        icon: 'tabler:social',
       },
       {
         title: 'Diversidad',
         description:
           'Valoramos la diversidad de perspectivas, experiencias y conocimientos que enriquecen nuestra comunidad.',
-        icon: 'tabler:square-number-2',
+        icon: 'tabler:device-laptop',
       },
       {
         title: 'Inclusión',
         description:
           'Fomentamos un ambiente acogedor donde todos se sientan bienvenidos y valorados, independientemente de su experiencia o background.',
-        icon: 'tabler:square-number-3',
+        icon: 'tabler:meteor',
       },
     ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1521517407911-565264e7d82d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80',
-      alt: 'Colorful Image',
-    }}
-  />
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    items={[
-      {
-        title: 'Descentralización',
-        description:
-          'La metacomunidad no busca centralizar el poder, sino empoderar a las comunidades existentes y fomentar su crecimiento autónomo.',
-        icon: 'tabler:wand',
-      },
-      {
-        title: 'Complementariedad',
-        description:
-          'La metacomunidad se enfoca en complementar las actividades de las comunidades existentes, evitando la duplicación de esfuerzos.',
-        icon: 'tabler:settings',
-      },
-      {
-        title: 'Apertura',
-        description:
-          'La metacomunidad es abierta a todas las personas e iniciativas que contribuyan al fortalecimiento del ecosistema tecnológico.',
-        icon: 'tabler:template',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1576153192621-7a3be10b356e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
-      alt: 'Colorful Image',
-    }}
   />
 
   <!-- Features2 Widget ************** -->
 
   <Features2
     id="compromises"
-    title="Estos son nuestros compromisos"
-    subtitle="Queremos que las comunidades se sientan involucradas."
+    title="Nuestros compromisos"
+    subtitle="Construyendo un ecosistema colaborativo"
     columns={3}
     items={[
       {
@@ -121,9 +85,35 @@ const metadata = {
     ]}
   />
 
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    id="get-started"
+    title="¡Involúcrate!"
+    subtitle="¿Cómo puedo ser parte de Ecuador In Tech?"
+    columns={3}
+    items={[
+      {
+        title: 'Explora',
+        description: 'Descubre las diferentes formas de involucrarte en la comunidad.',
+        icon: 'tabler:circle-number-1',
+      },
+      {
+        title: 'Conecta',
+        description: 'Ponte en contacto con los organizadores de la comunidad.',
+        icon: 'tabler:circle-number-2',
+      },
+      {
+        title: 'Participa',
+        description: `¡No tengas miedo de dar el primer paso!`,
+        icon: 'tabler:circle-number-3',
+      },
+    ]}
+  />
+
   <!-- FAQs Widget ******************* -->
   <FAQs
-    title="Preguntas frecuentes sobre Ecuador In Tech"
+    title="¡Preguntas frecuentes!"
     items={[
       {
         title: '¿Qué es Ecuador In Tech?',
@@ -163,17 +153,19 @@ const metadata = {
   <CallToAction
     id="volunteers"
     title="¡Involúcrate!, sólo regístrate"
-    subtitle="Te invitamos a unirte a nuestra metacomunidad y a trabajar juntos para construir un ecosistema tecnológico más fuerte y colaborativo en Ecuador."
+    subtitle="Es hora de trabajar juntos por un ecosistema tech saludable"
     actions={[
       {
         variant: 'primary',
-        text: '¿Eres voluntario?',
-        href: '/',
+        text: 'Soy voluntario',
+        href: 'https://forms.gle/tvZva7cgRbFBTTTk6',
+        target: '_blank',
       },
       {
         variant: 'secondary',
-        text: '¿Diriges alguna comunidad?',
-        href: '/',
+        text: 'Soy líder comunitario',
+        href: 'https://forms.gle/1g1g7TQAUC2nDjQ9A',
+        target: '_blank',
       },
     ]}
   />
