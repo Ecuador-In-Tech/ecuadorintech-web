@@ -19,9 +19,16 @@ Este repositorio sirve como el centro de operaciones de nuestra metacomunidad, *
 
 ## Estructura del repositorio
 
-- **docs:** Documentación sobre la comunidad, los proyectos y las guías de contribución.
-- **projects:** Directorios para cada uno de los proyectos de la comunidad.
-- **resources:** Recursos adicionales como logotipos, plantillas, etc.
+Este proyecto utiliza Astro como framework principal y está organizado de la siguiente manera:
+
+- **assets**: Contiene todos los archivos estáticos como imágenes, iconos y estilos.
+- **components**: Almacena componentes reutilizables para la interfaz de usuario.
+- **config.yaml**: Archivo de configuración principal del proyecto.
+- **content**: Contiene el contenido del sitio, como las publicaciones del blog en formato Markdown.
+- **layouts**: Define las plantillas de diseño para diferentes tipos de páginas.
+- **pages**: Contiene las páginas individuales del sitio.
+- **types**: Define las interfaces de TypeScript para un mejor tipado.
+- **utils**: Funciones utilitarias para tareas comunes.
 
 ## Código de conducta
 
