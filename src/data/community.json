@@ -1,0 +1,34 @@
+{
+  "cards": [
+    {
+      "title": "HER-UX",
+      "description": "Explore the majestic peaks and valleys",
+      "image": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=500&auto=format",
+      "url": "/"
+    },
+    {
+      "title": "Kernel Chaos",
+      "description": "Discover the mysteries of the deep blue sea",
+      "image": "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=500&auto=format",
+      "url": "/"
+    },
+    {
+      "title": "LUGER",
+      "description": "Journey through endless golden dunes",
+      "image": "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=500&auto=format",
+      "url": "/"
+    },
+    {
+      "title": "WordPress Ecuador",
+      "description": "Wander through ancient woodland paths",
+      "image": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=500&auto=format",
+      "url": "/"
+    },
+    {
+      "title": "FunPython",
+      "description": "Wander through ancient woodland paths",
+      "image": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=500&auto=format",
+      "url": "/"
+    }
+  ]
+}
