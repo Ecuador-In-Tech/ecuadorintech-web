@@ -2,9 +2,13 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
+
+import CardCarousel from '~/components/widgets/CardCarousel.astro';
+import cardsData from '~/data/community.json';
 
 const metadata = {
   title: 'Ecuador in Tech',
@@ -147,6 +151,13 @@ const metadata = {
       },
     ]}
   />
+
+  <!-- Community *********** -->
+
+  <HeroText title="Comunidades" />
+  <div id="community" class="my-8">
+    <CardCarousel cards={cardsData.cards} />
+  </div>
 
   <!-- CallToAction Widget *********** -->
 
