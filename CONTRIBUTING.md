@@ -17,6 +17,7 @@ Tu ayuda es fundamental para mantener esta plataforma actualizada y relevante pa
 ## Estructura de los archivos de datos:
 
 - **comunidades.json/csv:** Cada comunidad debe tener los siguientes campos (puedes personalizarlos):
+
   - nombre
   - descripción
   - enlace

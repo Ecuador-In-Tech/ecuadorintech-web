@@ -35,4 +35,5 @@ Este proyecto utiliza Astro como framework principal y está organizado de la si
 [Consulta nuestro código de conducta aquí](CODE_OF_CONDUCT.md)
 
 ## Licencia
+
 [Licencia](LICENSE)
