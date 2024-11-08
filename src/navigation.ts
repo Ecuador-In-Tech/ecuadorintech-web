@@ -4,18 +4,24 @@ export const headerData = {
   links: [
     {
       text: 'Nosotros',
-      href: getPermalink('/'),
+      href: getPermalink('/#about'),
     },
     {
       text: 'Comunidades',
-      href: getPermalink('/'),
+      href: getPermalink('/#community'),
     },
     {
       text: 'Eventos',
       href: getPermalink('/'),
     },
   ],
-  actions: [{ text: 'Involúcrate', href: getPermalink('/#volunteers'), target: '_blank' }],
+  actions: [
+    {
+      text: 'Quiero donar',
+      href: 'https://docs.google.com/forms/d/e/1FAIpQLSdnnzAHASxIOTRkXE9oS1lgVU3gtb6ZyCeaU0ZVKqN4DFI1eQ/viewform',
+      target: '_blank',
+    },
+  ],
 };
 
 export const footerData = {
@@ -23,7 +29,7 @@ export const footerData = {
     {
       title: 'Comunidad',
       links: [
-        { text: 'Directorio', href: '#' },
+        { text: 'Directorio', href: getPermalink('/#community') },
         { text: 'Eventos', href: '#' },
       ],
     },
@@ -31,12 +37,17 @@ export const footerData = {
       title: 'Nosotros',
       links: [
         { text: 'Equipo', href: '#' },
-        { text: 'Código de Conducta', href: '#' },
+        { text: 'Código de Conducta', href: getPermalink('/coc') },
       ],
     },
     {
       title: 'Donaciones',
-      links: [{ text: 'Quiero donar', href: '#' }],
+      links: [
+        {
+          text: 'Quiero donar',
+          href: 'https://docs.google.com/forms/d/e/1FAIpQLSdnnzAHASxIOTRkXE9oS1lgVU3gtb6ZyCeaU0ZVKqN4DFI1eQ/viewform',
+        },
+      ],
     },
     {
       title: 'Oportunidades',
