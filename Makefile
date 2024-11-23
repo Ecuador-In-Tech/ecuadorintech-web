@@ -1,6 +1,7 @@
 all: dev
 
 check: FRC
+	dprint fmt
 	biome check --write
 
 build: check
