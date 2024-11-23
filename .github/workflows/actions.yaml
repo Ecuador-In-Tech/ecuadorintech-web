@@ -15,21 +15,7 @@ permissions:
   id-token: write
 
 jobs:
-  fix:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout your repository using git
-        uses: actions/checkout@v4
-      - name: Use Node.js 22
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      - run: npm run fix
-
   build:
-    needs: fix
     runs-on: ubuntu-latest
     steps:
       - name: Checkout your repository using git
