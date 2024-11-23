@@ -1,3 +1,5 @@
+all: dev
+
 check: FRC
 	biome check --write
 
