@@ -30,18 +30,18 @@ const {
       class="grid grid-cols-3 gap-4 dark:text-white sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3"
     >
       {
-        prices &&
-		prices.map(
-			({
-				title,
-				subtitle,
-				price,
-				period,
-				items,
-				callToAction,
-				hasRibbon = false,
-				ribbonTitle,
-			}) => (
+        prices
+    && prices.map(
+      ({
+        title,
+        subtitle,
+        price,
+        period,
+        items,
+        callToAction,
+        hasRibbon = false,
+        ribbonTitle,
+      }) => (
           <div
             class="col-span-3 mx-auto flex w-full sm:col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1 intersect-once motion-safe:md:intersect:animate-fade motion-safe:md:opacity-0 intersect-quarter"
           >
@@ -120,10 +120,10 @@ const {
                       <div class={`flex justify-center`}>
                         {
                           typeof callToAction === "string"
-		? (
+    ? (
                             <Fragment set:html={callToAction} />
                           )
-		: callToAction && callToAction.href && (
+    : callToAction && callToAction.href && (
                             <Button
                               {...(hasRibbon ? { variant: "primary" } : {})}
                               {...callToAction}
@@ -138,7 +138,7 @@ const {
             }
           </div>
         ),
-		)
+    )
       }
     </div>
   </div>

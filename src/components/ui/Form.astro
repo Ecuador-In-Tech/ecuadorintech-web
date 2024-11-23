@@ -7,15 +7,15 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
 
 <form>
   {
-    inputs &&
-		inputs.map(
-			({
-				type = "text",
-				name,
-				label = "",
-				autocomplete = "on",
-				placeholder = "",
-			}) => name && (
+    inputs
+    && inputs.map(
+      ({
+        type = "text",
+        name,
+        label = "",
+        autocomplete = "on",
+        placeholder = "",
+      }) => name && (
       <div class="mb-6">
         {
           label && (
@@ -34,7 +34,7 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
         />
       </div>
     ),
-		)
+    )
   }
 
   {

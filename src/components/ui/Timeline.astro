@@ -25,13 +25,15 @@ const {
     <div class={containerClass}>
       {
         items.map(
-		({ title, description, icon, classes: itemClasses = {} }, index = 0) =>
-			(
+    (
+      { title, description, icon, classes: itemClasses = {} },
+      index = 0,
+    ) => (
           <div
             class={twMerge(
-            	"flex intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade",
-            	panelClass,
-            	itemClasses?.panel,
+              "flex intersect-once intersect-quarter motion-safe:md:opacity-0 motion-safe:md:intersect:animate-fade",
+              panelClass,
+              itemClasses?.panel,
             )}
           >
             <div class="flex flex-col items-center mr-4 rtl:mr-0 rtl:ml-4">
@@ -42,9 +44,9 @@ const {
                       <Icon
                         name={icon || defaultIcon}
                         class={twMerge(
-                        	"w-10 h-10 p-2 rounded-full border-2",
-                        	defaultIconClass,
-                        	itemClasses?.icon,
+                          "w-10 h-10 p-2 rounded-full border-2",
+                          defaultIconClass,
+                          itemClasses?.icon,
                         )}
                       />
                     )
@@ -77,7 +79,7 @@ const {
             </div>
           </div>
         ),
-	)
+  )
       }
     </div>
   )
