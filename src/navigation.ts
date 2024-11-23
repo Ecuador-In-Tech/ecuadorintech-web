@@ -59,5 +59,11 @@ export const footerData = {
     { text: 'Políticas y Privacidad', href: getPermalink('/privacy') },
     { text: 'Código de Conducta', href: getPermalink('/coc') },
   ],
-  socialLinks: [{ ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/Ecuador-In-Tech' }],
+  socialLinks: [
+    {
+      ariaLabel: 'Github',
+      icon: 'tabler:brand-github',
+      href: 'https://github.com/Ecuador-In-Tech',
+    },
+  ],
 };

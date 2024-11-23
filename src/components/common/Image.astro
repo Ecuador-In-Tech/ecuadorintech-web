@@ -2,11 +2,11 @@
 import type { HTMLAttributes } from 'astro/types';
 import { findImage } from '~/utils/images';
 import {
-  getImagesOptimized,
-  astroAsseetsOptimizer,
-  unpicOptimizer,
-  isUnpicCompatible,
   type ImageProps,
+  astroAsseetsOptimizer,
+  getImagesOptimized,
+  isUnpicCompatible,
+  unpicOptimizer,
 } from '~/utils/images-optimization';
 
 type Props = ImageProps;
@@ -22,11 +22,11 @@ if (props.alt === undefined || props.alt === null) {
 }
 
 if (typeof props.width === 'string') {
-  props.width = parseInt(props.width);
+  props.width = Number.parseInt(props.width);
 }
 
 if (typeof props.height === 'string') {
-  props.height = parseInt(props.height);
+  props.height = Number.parseInt(props.height);
 }
 
 if (!props.loading) {
@@ -53,9 +53,12 @@ if (
 ---
 
 {
-  !image ? (
-    <Fragment />
-  ) : (
-    <img src={image.src} crossorigin="anonymous" referrerpolicy="no-referrer" {...image.attributes} />
+  !image ? <Fragment /> : (
+    <img
+      src={image.src}
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      {...image.attributes}
+    />
   )
 }

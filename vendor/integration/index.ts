@@ -23,7 +23,7 @@ export default ({ config: _themeConfig = 'src/config.yaml' } = {}): AstroIntegra
         const buildLogger = logger.fork('astrowind');
 
         const virtualModuleId = 'astrowind:config';
-        const resolvedVirtualModuleId = '\0' + virtualModuleId;
+        const resolvedVirtualModuleId = `\0${virtualModuleId}`;
 
         const rawJsonConfig = (await loadConfig(_themeConfig)) as Config;
         const { SITE, I18N, METADATA, APP_BLOG, UI, ANALYTICS } = configBuilder(rawJsonConfig);
@@ -65,7 +65,7 @@ export default ({ config: _themeConfig = 'src/config.yaml' } = {}): AstroIntegra
 
           buildLogger.info(`Astrowind \`${_themeConfig}\` has been loaded.`);
         } else {
-          buildLogger.info(`Astrowind config has been loaded.`);
+          buildLogger.info('Astrowind config has been loaded.');
         }
       },
       'astro:config:done': async ({ config }) => {
@@ -90,7 +90,10 @@ export default ({ config: _themeConfig = 'src/config.yaml' } = {}): AstroIntegra
           const sitemapExists = fs.existsSync(sitemapFile);
 
           if (hasIntegration && sitemapExists) {
-            const robotsTxt = fs.readFileSync(robotsTxtFile, { encoding: 'utf8', flag: 'a+' });
+            const robotsTxt = fs.readFileSync(robotsTxtFile, {
+              encoding: 'utf8',
+              flag: 'a+',
+            });
             const sitemapUrl = new URL(sitemapName, String(new URL(cfg.base, cfg.site)));
             const pattern = /^Sitemap:(.*)$/m;
 

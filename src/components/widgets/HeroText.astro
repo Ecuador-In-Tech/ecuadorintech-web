@@ -1,6 +1,6 @@
 ---
-import type { CallToAction } from '~/types';
 import Button from '~/components/ui/Button.astro';
+import type { CallToAction } from '~/types';
 
 export interface Props {
   title?: string;
@@ -58,22 +58,22 @@ const {
             {
               callToAction && (
                 <div class="flex w-full sm:w-auto">
-                  {typeof callToAction === 'string' ? (
-                    <Fragment set:html={callToAction} />
-                  ) : (
-                    <Button variant="primary" {...callToAction} />
-                  )}
+                  {
+                    typeof callToAction === "string" ? (
+                      <Fragment set:html={callToAction} />
+                    ) : <Button variant="primary" {...callToAction} />
+                  }
                 </div>
               )
             }
             {
               callToAction2 && (
                 <div class="flex w-full sm:w-auto">
-                  {typeof callToAction2 === 'string' ? (
-                    <Fragment set:html={callToAction2} />
-                  ) : (
-                    <Button {...callToAction2} />
-                  )}
+                  {
+                    typeof callToAction2 === "string" ? (
+                      <Fragment set:html={callToAction2} />
+                    ) : <Button {...callToAction2} />
+                  }
                 </div>
               )
             }
